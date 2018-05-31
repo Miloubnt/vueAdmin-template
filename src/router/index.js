@@ -12,11 +12,32 @@ export default new Router({
       redirect: '/index'
     },
     {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/login')
+    },
+    {
       path: '/index',
       name: 'index',
       component: () => import('@/views/index')
-    }
-    // { path: '*', redirect: '/404' }
+    },
+    {
+      path: '/balance',
+      name: 'balance',
+      component: () => import('@/views/balance/')
+    },
+    {
+      path: '/myCoupon',
+      name: 'myCoupon',
+      component: () => import('@/views/coupon/myCoupon')
+    },
+    {
+      path: '/integral',
+      name: 'integral',
+      component: () => import('@/views/integral/')
+    },
+    { path: '/404', component: () => import('@/views/404') },
+    { path: '*', redirect: '/404' }
   ]
 })
 
